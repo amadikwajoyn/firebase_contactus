@@ -15,30 +15,63 @@
     <div class="section-gap">
       <div class="wrapper">
         <div class="form-inner-cont">
-          <form action="" method="post" class="signin-form">
+          <form action="" method="post" class="signin-form" id="contactForm">
+            <div class="successfulMes"> Message Submitted Successfully</div>
+
             <h3>Contact Us</h3>
             <div class="form-input">
               <label for="w3lName">Name</label>
-              <input type="text" name="name" id="w3lName" placeholder="Enter your name" required="" />
+              <input type="text" name="name" id="name" placeholder="Enter your name" />
             </div>
             <div class="form-input">
               <label for="w3lSender">Email</label>
-              <input type="email" name="sender" id="w3lSender" placeholder="Enter your email" required />
+              <input type="email" name="sender" id="email" placeholder="Enter your email" />
             </div>
             <div class="form-input">
               <label for="w3lSubject">Subject</label>
-              <input type="text" name="subject" id="w3lSubject" placeholder="Enter subject" required />
+              <input type="text" name="subject" id="subject" placeholder="Enter subject" />
             </div>
             <div class="form-input">
               <label for="w3lMessage">Message</label>
-              <textarea name="message" id="w3lMessage" placeholder="Type your query here" required=""></textarea>
+              <textarea name="message" id="message" placeholder="Type your query here" ></textarea>
             </div>
-            <button class="btn" id="submit">Submit</button>
+            <button class="btn" id="submit" type="submit">Submit</button>
           </form>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCk4JPhrMOY4S6clvTK1sjtcZUvFhcGf1w",
+    authDomain: "checkingon-770bc.firebaseapp.com",
+    databaseURL: "https://checkingon-770bc.firebaseio.com",
+    projectId: "checkingon-770bc",
+    storageBucket: "checkingon-770bc.appspot.com",
+    messagingSenderId: "241338513510",
+    appId: "1:241338513510:web:81cd14fe16808a158995a7",
+    measurementId: "G-MDX4H57VKH"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+
+  <script src="main.js"> </script>
 </body>
 
 </html>
